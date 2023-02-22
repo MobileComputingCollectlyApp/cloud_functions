@@ -61,9 +61,9 @@ const validateFirebaseIdToken = async (req, res, next) => {
     }
 };
 
-// app.use(cors);
-// app.use(cookieParser);
-// app.use(validateFirebaseIdToken);
+app.use(cors);
+app.use(cookieParser);
+app.use(validateFirebaseIdToken);
 app.get('/generate-dataset', async (req, res) => {
     // Read project_id and form_id from query parameters
     if (req.query?.project_id && req.query?.form_id) {
